@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>  
+    <header class="about">
+      <div class="navbar-container">
+        <div class="logo" id="logo">
+          <img src="Img/logo.png" alt="Logo">
+        </div>
+
+        <nav class="navbar" id="navbar">
+          <ul>
+            <li><a href="the office.html">accueil</a></li>
+            <li><a href="gallery.html">galerie</a></li>
+            <li><a href="register.html">s'inscrire</a></li>
+            <li><a href="connexion.html">se connecter</a></li>
+            <li><a href="myaccount.html">mon compte</a></li>
+            <li><a href="ai-design.html">conception via i.a.</a></li>
+            <li><a href="webshop.html">webshop</a></li>
+            <li><a href="mailto:contact@theoffice.com">nous contacter</a></li> 
+          </ul>
+        </nav>
+      </div> 
+
+      <h1>À propos de nous</h1>
+      <p>The Office est une jeune entreprise en pleine expansion et développement, basée à Bruxelles. Elle offre un service B2B en matière d'installation et de livraison de mobilier de bureau aux PME. 
+        L'entreprise belge accorde beaucoup d'importance à la qualité des processus de logistique et au service client. 
+        Chez The Office, les nouvelles technologies sont mises au coeur de nos services grâce à l'IA.</p>
+    </header>
+    
+  <section class="columns">
+    <div class="text1">
+      <h2 class="h2">Notre mission</h2>
+      <p>Chez The Office, nous aménageons vos espaces de travail avec qualité, rapidité et durabilité. En produisant localement et en utilisant des solutions écologiques, nous offrons un mobilier conçu pour inspirer, tout en réduisant notre impact environnemental. 
+            Simplifiez l'aménagement de votre bureau avec un service premium, pensé pour vous. Votre espace de travail sera confectionné à la hauteur de vos ambitions !
+      </p>
+    </div>
+    <div class="image1">
+      <img src="Img/The Office.jpg">   
+    </div>
+    
+    <div class="image2">
+      <img src="Img/notre histoire.jpg">
+    </div>
+    <div class="text2">
+      <h2 class="h2">Notre histoire</h2>
+      <p>The Office est née de l'initiative de 3 entrepreneurs belges passionnés par l'aménagement des espaces de travail  et les nouvelles technologies. Convaincus, que l'environnement professionnel joue un rôle clé dans le bien-être des équipes, ils ont uni leurs compétences pour créer une solution innovante et écoresponsable, répondant aux besoins des entreprises bruxelloises en matière de mobilier de bureau. 
+        Notre engagement va au-delà de la simple installation de meubles : nous créons des espaces où les employés se sentent bien, favorisant leur productivité et leur bien-être. Grâce à l'intégration des dernières technologies, nous offrons des solutions personnalisées et durables qui permettent aux entreprises de bénéficier de bureaux à la fois fonctionnels et modernes, tout en minimisant leur impact environnemental.</p>
+    </div> 
+   
+    <div class="text3">
+      <h2 class="h2">Nos services</h2>
+     <p> Chez The Office, nous offrons une gamme de services B2B conçus pour répondre aux besoins spécifiques des entreprises en matière d'aménagement et de gestion d'espace. 
+      Nos services incluent la livraison et l'installation de mobilier de bureau, adaptés aux exigences uniques de chaque client. 
+      Nous nous engageons à offrir des solutions rapides et efficaces, garantissant ainsi une installation fluide et sans tracas. 
+      De plus, nous intégrons des technologies d'intelligence artificielle pour optimiser l'utilisation des espaces, maximiser l'efficacité opérationnelle et réduire les coûts. 
+      Grâce à cette approche innovante, nous assurons une gestion optimale des ressources et des espaces de travail. 
+      Enfin, nous proposons un support et une maintenance continus, afin de garantir la durabilité de nos installations et permettre à nos clients de s'adapter facilement aux évolutions de leurs besoins. 
+      Avec The Office, vous bénéficiez d'une solution complète et personnalisée pour améliorer votre environnement de travail tout en réduisant votre empreinte opérationnelle.
+    </p>
+    </div>
+
+    <div class="image3">
+      <img src="Img/The Office_notre histoire.jpg">
+    </div>
+  </section> 
+</body>
+
+<script>
+  // script.js
+  const logo = document.getElementById("logo");
+  const navbar = document.getElementById("navbar");
+
+  let navbarVisible = false; // Pour suivre si la navbar est verrouillée
+
+  // Fonction pour afficher la navbar
+  function showNavbar() {
+    navbar.classList.add("visible");
+  }
+
+  // Fonction pour masquer la navbar
+  function hideNavbar() {
+    if (!navbarVisible) {
+      navbar.classList.remove("visible");
+    }
+  }
+
+  // Fonction pour verrouiller/déverrouiller la navbar au clic
+  function toggleNavbarLock() {
+    navbarVisible = !navbarVisible;
+  }
+
+  // Événements pour interagir avec le logo
+  logo.addEventListener("mouseover", showNavbar);
+  logo.addEventListener("mouseout", hideNavbar);
+
+  // Événements pour interagir avec la navbar
+  navbar.addEventListener("mouseover", showNavbar);
+  navbar.addEventListener("mouseout", hideNavbar);
+
+  // Événement pour verrouiller la navbar au clic
+  navbar.addEventListener("click", toggleNavbarLock);
+  logo.addEventListener("click", toggleNavbarLock);
+</script>
+</html>

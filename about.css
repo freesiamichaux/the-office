@@ -1,0 +1,239 @@
+/*Global reset*/
+@font-face {
+    font-family: "Poppins";
+    src: url(Font/Poppins/Poppins-Light.ttf) format("truetype");
+}
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; 
+    font-family: "Poppins";
+    box-sizing: border-box
+}
+
+.about {
+    background-color:#732301;
+    padding: 40px 20px;
+    text-align: center;
+}    
+
+.about h1, .about p {
+    color: #FEFEE2;  /* Couleur pour h1 et p dans .about */
+    font-size: 1.2em;  /* Taille de la police pour h1 et p dans .about */
+}
+
+/*Section class*/
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 5vw auto;
+}
+
+.column h2, .column p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.text1 {
+    display: flex;
+    flex-direction: column; 
+    width: 45vw;
+    height: 50vh;
+    padding: 2vh 2vw;
+    margin: 3vh 3vw;
+    margin-top: 2vh; 
+    background-color: #FEFEE2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.text1 h2 {
+    text-align: center; 
+    margin: 0 ;
+    color: #732301;
+}
+
+.text1 p {
+    font-size: 100vw;
+    margin-top: auto; /* Laisse le paragraphe prendre l'espace restant */
+    text-align: left; /* Centre horizontalement */
+}
+
+.image1 img {
+    max-width: 100%;                       /* L'image occupe 40% de la colonne */
+    width: 40vw;
+    height: 50vh;
+    margin: 3vh 3vw;
+    margin-bottom: 30vh;
+    border-radius: 1vw; /* Optionnel pour un style arrondi */
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;   
+    width: 48vw;  
+    height: 70vh;
+    padding: 2vh 2vw;
+    margin: 3vh 3vw;
+    margin-top: 0.5vh;
+    background-color: #FEFEE2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.text2 h2 {
+    margin: 0; /* Espacement en dessous du titre */
+    color: #732301;
+    text-align: center; /* Facultatif, car héritera de `.texte` */
+    padding-top: 0;
+}
+
+.text2 p {
+    line-height: 1.5; /* Améliore la lisibilité */
+    color: #333; /* Couleur pour le texte */
+    padding-bottom: 50vh;
+    text-align: left;
+}
+
+.image2 {
+    display: flex;
+    flex-direction: column;   
+    width: 40vw;  /* Largeur des colonnes */
+    height: 110vh;
+    padding: 1.5vw;
+    margin: 2vw;
+    margin-bottom: 40vh;
+}
+
+.image2 img {
+    display: flex;
+    align-items: flex-start;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optionnel pour un style d'ombre */
+    max-width: 100%;                       /* L'image occupe 40% de la colonne */
+    height: auto; 
+    border-radius: 1vw; /* Optionnel pour un style arrondi */
+}
+
+.text3 {
+    display: flex;
+    flex-direction: column; 
+    width: 48vw;
+    height: 90vh;
+    padding: 2vh 2vw;
+    margin: 3vh 3vw; 
+    margin-top: -60vh;
+    background-color: #FEFEE2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.text3 h2 {
+    margin: 0 ;
+    color: #732301;
+    text-align: center;
+}
+
+.text3 p {
+    text-align: left; /* Centre horizontalement */
+}
+
+.image3 {
+    width: 40vw;
+    height: 110vh;
+    margin: 2vw;
+    margin-top: -60vh;
+}
+
+.image3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optionnel pour un style arrondi */
+}
+
+/*Logo*/  
+.logo {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 10;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.logo :hover {
+    transform: rotate(360deg);
+    transition: 0,5s;
+}
+  
+.logo img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+/*Menu navigation*/
+.navbar-container {
+    position: relative;
+}  
+
+.navbar {
+    position: fixed;
+    top: 5px; /* Aligné verticalement avec le logo */
+    left: 5px;
+    background-color: #732301;
+    width: 0; /* Initialement masqué */
+    height: 50px; /* Hauteur fixe */
+    display: flex; /* Pour aligner les boutons horizontalement */
+    align-items: center;
+    justify-content: space-evenly; /* Espacement uniforme des boutons */
+    overflow: hidden; /* Contenu masqué lorsqu'il est rétracté */
+    transition: width 0.5s ease; /* Transition pour déroulement horizontal */
+    z-index: 9;
+    border-radius: 10px;
+}
+  
+.navbar.visible {
+    width: 99%; /* La navbar s'étend sur toute la largeur de la fenêtre */
+    display: flex;
+
+}
+  
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Pour les aligner horizontalement */
+    width: 100%; /* Les boutons occupent toute la largeur */
+    align-items: center;
+}
+  
+.navbar ul li {
+    flex: 1; /* Distribution égale de l'espace entre les boutons */
+    text-align: center;
+}
+  
+.navbar ul li a {
+    color: #FEFEE2;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    background-color: #732301;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin: 5px;
+    
+}
+  
+.navbar ul li a:hover {
+    background-color: #d5b07c;
+}
+
+.navbar ul li a:active {
+  transform: rotateX(360deg);
+  transition: 2s;
+}

@@ -57,8 +57,7 @@
 }
 
 .text1 p {
-    font-size: 100vw;
-    margin-top: auto; /* Laisse le paragraphe prendre l'espace restant */
+    margin-top: 0.5vh; /* Laisse le paragraphe prendre l'espace restant */
     text-align: left; /* Centre horizontalement */
 }
 
